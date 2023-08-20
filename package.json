@@ -1,0 +1,14 @@
+{
+	"name": "random-knowledge",
+	"version": "0.0.1",
+	"description": "Get a random page from Notion",
+	"type": "module",
+	"main": "main.js",
+	"engines": {
+		"node": "18"
+	},
+	"dependencies": {
+		"@notionhq/client": "^2.2.11",
+		"dotenv": "^16.3.1"
+	}
+}
