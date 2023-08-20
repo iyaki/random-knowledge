@@ -17,21 +17,20 @@ async function main() {
 }
 
 function getRandomArticleIndex(max) {
-  max = Math.floor(max);
-  return Math.floor(Math.random() * max); // The maximum is exclusive
+  return Math.floor(Math.random() * max); // The minimun is zero and maximum is exclusive
 }
 
 async function fetchArticles() {
-	let artciles = []
+	let articles = []
 
 	let cursor
 	while (cursor !== null) {
 		const results = await query(cursor)
 		cursor = results.next_cursor
-		artciles = artciles.concat(results.results)
+		articles = articles.concat(results.results)
 	}
 
-	return artciles
+	return articles
 }
 
 async function query(cursor) {
